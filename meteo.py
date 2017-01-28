@@ -1,3 +1,4 @@
+import math
 
 from sense_hat import SenseHat
 sense=SenseHat()
@@ -7,6 +8,7 @@ sense=SenseHat()
 temp = sense.get_temperature()
 
 press = sense.get_pressure()
+
 
 #sense.show_message(str(temp))
 #sense.show_message(str(press))
@@ -24,5 +26,11 @@ elif sense.pressure >= 1000:
 else:
     sense.load_image ("pluie.png")
     
+
+sense.set_pixel(0,7,0,255,0)
     
-    
+nbpix=sense.humidity/100*6+1
+print (nbpix)
+nbpixint=math.floor (nbpix)
+print(nbpixint)
+sense.set_pixel(nbpixint,7,0,255,0)
