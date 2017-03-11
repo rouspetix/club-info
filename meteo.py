@@ -1,3 +1,6 @@
+import math
+
+
 
 from sense_hat import SenseHat
 sense=SenseHat()
@@ -26,3 +29,15 @@ else:
     
     
     
+sense.set_pixel(0,7,0,255,00);
+nbpix=sense.humidity/100*6+1;
+print (nbpix)
+nbpixint=math.floor(nbpix)
+print(nbpixint)
+sense.set_pixel(nbpixint,7,0,255,0);
+
+counter = 0;
+while (counter <= nbpixint):
+    print (counter)
+    sense.set_pixel(counter,7,0,255,0);
+    counter = counter +1;
