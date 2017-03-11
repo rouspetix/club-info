@@ -5,5 +5,9 @@ sense=SenseHat()
 
 
 
-event = sense.stick.wait_for_event()
-print("The joystick was {} {}".format(event.action, event.direction))
+
+while(True):
+
+
+    event = sense.stick.wait_for_event()
+    print("The joystick was {} {}".format(event.action, event.direction))
