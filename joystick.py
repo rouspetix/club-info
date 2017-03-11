@@ -16,6 +16,21 @@ while(True):
             print (sense.pressure)
             print(sense.temperature)
             print(sense.humidity)
+            temp = str(round (sense.get_temperature(),0))
+
+            pressure=str(round (sense.get_pressure(),0))
+            humidity=str(round (sense.get_humidity(),2))
+            
+
+
+
+            
+            sense.show_message("temperature: ",0.15)
+            sense.show_message(temp+"C",0.15,[0,0,255])
+            sense.show_message("humidite:",0.15)
+            sense.show_message(humidity+"%",0.15,[0,0,255])
+            sense.show_message("pression:",0.15)
+            sense.show_message(pressure+"hPa",0.15,[0,0,255])
 
         print("bouton relaché")
         
