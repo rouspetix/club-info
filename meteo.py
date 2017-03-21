@@ -29,6 +29,8 @@ else:
 
 sense.set_pixel(0,7,0,255,0)
     
+    
+sense.set_pixel(0,7,0,255,00);
 nbpix=sense.humidity/100*6+1;
 print (nbpix)
 nbpixint=math.floor(nbpix)
