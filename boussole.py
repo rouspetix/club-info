@@ -34,7 +34,7 @@ while (counter <= 6):
 
 sense.set_pixel(3, 0, 255, 48, 48)
 
-a=10.0
+a=north
 x=cos(a/180*pi+pi/2)*3+3
 y=sin(a/180*pi+pi/2)*3+3
 
